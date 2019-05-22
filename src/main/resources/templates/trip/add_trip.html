@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{Layout/HomeDesign}"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Add Trip</title>
+</head>
+<body layout:fragment="content">
+<!--<span th:utext="${userName}"></span>-->
+<form class="needs-validation" role="form" method="post" enctype="multipart/form-data"
+      th:action="@{/home/trip/add_trip}" >
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="tripname">Trip Name</label>
+            <input type="text" class="form-control" id="tripname" placeholder="" value="" name="title"
+                   required>
+            <div class="invalid-feedback">
+                Valid trip name is required.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="impressions">Impressions</label>
+            <input type="text" class="form-control" id="impressions" placeholder="" value="" name="impressions"
+                   required>
+            <div class="invalid-feedback">
+                Trip impressions are required.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label for="photo1">Photo String</label>
+        <input type="file" class="form-control" id="photo1" placeholder="" value="" name="picture"
+               required>
+           <div class="invalid-feedback">
+            Valid picture is required.
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="shortDescription">Photo Description</label>
+            <input type="text" class="form-control" id="shortDescription" placeholder="" value="" name="pictureDetails"
+                   required>
+            <div class="invalid-feedback">
+                Photo Description is required.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="startDate">Date From</label>
+            <input type="date" class="form-control" id="startDate" placeholder="" value="" name="startDate"
+                   required>
+            <div class="invalid-feedback">
+                Date From is required
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="endDate">Date To</label>
+            <input type="date" class="form-control" id="endDate" placeholder="" value="" name="endDate"
+                   required>
+            <div class="invalid-feedback">
+                Date To is required.
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="mb-3">-->
+    <!--<label for="username">Username</label>-->
+    <!--<div class="input-group">-->
+    <!--<input type="text" class="form-control" id="username" placeholder="Username" th:field="*{userName}" required>-->
+    <!--<div class="invalid-feedback" style="width: 100%;">-->
+    <!--Your username is required.-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="mb-3">-->
+    <!--<label for="password">password</label>-->
+    <!--<div class="input-group">-->
+    <!--<input type="password" class="form-control" id="password" placeholder="Password" th:field="*{password}" required>-->
+    <!--<div class="invalid-feedback" style="width: 100%;">-->
+    <!--Your password is required.-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="mb-3">-->
+    <!--<label for="email">Email <span class="text-muted">(Optional)</span></label>-->
+    <!--<input type="email" class="form-control" id="email" placeholder="you@example.com">-->
+    <!--<div class="invalid-feedback">-->
+    <!--Please enter a valid email address.-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="mb-3">-->
+    <!--<label for="address">Address</label>-->
+    <!--<input type="text" class="form-control" id="address" placeholder="13 Decembrie street" th:field="*{address}" required>-->
+    <!--<div class="invalid-feedback">-->
+    <!--Please enter your address.-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="mb-3">-->
+    <!--<label for="city">City</label>-->
+    <!--<input type="text" class="form-control" id="city" placeholder="Brasov" th:field="*{city}" required>-->
+    <!--<div class="invalid-feedback">-->
+    <!--Please enter your city.-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="mb-3">-->
+    <!--<label for="phone">Phone</label>-->
+    <!--<input type="text" class="form-control" id="phone" placeholder="07xxxxxxxxx" th:field="*{phone}" required>-->
+    <!--<div class="invalid-feedback">-->
+    <!--Please enter your phone.-->
+    <!--</div>-->
+    <!--</div>-->
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Add Trip</button>
+</form>
+</body>
+</html>
